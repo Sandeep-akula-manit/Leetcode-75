@@ -7,9 +7,6 @@ def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
 
     # Compare each kid's candies with the maximum number of candies after adding the extra candies
     for i in range(len(candies)):
-        if candies[i] + extraCandies >= max_candies:
-            result.append(True)
-        else:
-            result.append(False)
+        result.append(candies[i] + extraCandies >= max_candies)
     
     return result
